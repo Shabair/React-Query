@@ -1,7 +1,7 @@
-import { useProducts } from "./hooks/products/query";
+import { useProductsQuery } from "./hooks/products/query";
 
 function App() {
-  const { data, isLoading, error } = useProducts();
+  const { data, isLoading, error } = useProductsQuery();
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error!</p>;
