@@ -18,10 +18,6 @@ export function useDeleteTodo() {
       queryClient.invalidateQueries({ queryKey: ["todos"] });
     },
 
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["todos"] });
-    },
-
     onError: (error) => {
       console.error("Failed to delete todo:", error);
     },
