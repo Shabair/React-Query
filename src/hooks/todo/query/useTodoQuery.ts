@@ -2,11 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 import { api } from "@/lib/api/axios/request";
 
 
-export function useProductsQuery() {
+export function useTodoQuery() {
   return useQuery({
-    queryKey: ["products"],
+    queryKey: ["todos"],
     queryFn: async () => {
-      const res = await api.get("/products");
+      const res = await api.get("/todos");
       return res.data; // Axios returns data directly
     },
   });
